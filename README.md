@@ -39,4 +39,9 @@ Download the _Twitter Emotion Corpus_ from: http://saifmohammad.com/WebPages/Sen
 The training script also needs GloVe embeddings to work. Download the _glove.twitter.27B.zip embeddings_ from https://nlp.stanford.edu/projects/glove/ and unzip it to the root of the project.
 
 #### All done!
-Now you are ready to train your own models. Have fun!
+Now you are ready to train your own models. Once you're done with tweaking the _train.py_ script run the following command to train the model:
+```
+pip3 train.py
+```
+
+Have fun!

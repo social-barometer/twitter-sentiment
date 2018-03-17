@@ -1,0 +1,12 @@
+.DS_store
+.vscode/
+bin/
+__pycache__
+glove.twitter.27B
+lib/
+main.py.backup
+man
+pip-selfcheck.json
+pyenv.cfg
+explore.py
+Jan9-2012-tweets-clean.txt
