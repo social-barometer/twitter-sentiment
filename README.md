@@ -1,6 +1,9 @@
 # twitter-sentiment
 Scripts for training a sentiment analysis model and serving it.
 
+## Demo
+Test it out here: https://twitter-emotion.herokuapp.com/
+
 ## Installation
 1) Clone the repo:
 ```
