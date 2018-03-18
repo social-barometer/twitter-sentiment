@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link href="/static/main.css" rel="stylesheet"/>
+        <script defer src="/static/main.js"></script>
+        <title>Twitter emotion</title>
+    </head>
+    <body>
+        <h1>Analyse the emotional content of tweets!</h1>
+        <p>Or any short text for that matter.</p>
+        <form id="analyse-tweet" action="/emtoion-analysis/">
+            <label for="tweet">Tweet:</label>
+            <input
+                name="tweet"
+                id="tweet"
+                type="text"
+                value=""
+                placeholder="Write your test here"/>
+            <button>Analyse!</button>
+        </form>
+        <p id="warning" style="display:none;">This might take a while...</p>
+        <ul id="results">
+            
+        </ul>
+    </body>
+</html>

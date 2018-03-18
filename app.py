@@ -6,7 +6,7 @@ import numpy as np
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 
-from flask import Flask, request, json, jsonify
+from flask import Flask, request, json, jsonify, render_template
 
 from data.preprocess import tokenize
 
@@ -55,12 +55,18 @@ def error_415(error=None):
 
     return resp
 
+@app.route("/", methods=['GET'])
+def index():
+    message = "Kikkelis kokkelis!"
+    return render_template('index.html', message=message)
+
 @app.route('/emotion-analysis', methods=['GET', 'POST'])
 def emotion_analysis():
     if request.headers['Content-Type'] == 'application/json':
         try:
+            print(request.json)
             analysis = analyze(request.json['tweets'])
-            return "Analysis: " + json.dumps(analysis)
+            return json.dumps(analysis)
         except:
             print("Error:", sys.exc_info()[3])
             return "500"
