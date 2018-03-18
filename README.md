@@ -4,6 +4,29 @@ Scripts for training a sentiment analysis model and serving it.
 ## Demo
 Test it out here: https://twitter-emotion.herokuapp.com/
 
+## API docs
+Query https://twitter-emotion.herokuapp.com/emotion-analysis
+with a _POST_ with a body like this:
+```json
+{
+	"tweets": [
+		"Tweet",
+		"Another tweet",
+		"Are we done with the tweets already?"
+		]
+}
+```
+Remeber to use _"content-type": "application/json"_ in the header!
+
+And it will return something like this:
+```json
+[
+    {"anger": 6.688, "disgust": 3.302, "fear": 16.631, "joy": 21.477, "sadness": 22.82, "surprise": 19.229},
+    {"anger": 9.33, "disgust": 6.366, "fear": 15.042, "joy": 22.213, "sadness": 25.334, "surprise": 22.911},
+    {"anger": 13.476, "disgust": 13.434, "fear": 8.879, "joy": 13.032, "sadness": 28.745, "surprise": 22.029}
+]
+```
+
 ## Installation
 1) Clone the repo:
 ```
